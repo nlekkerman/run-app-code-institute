@@ -1,36 +1,35 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto&display=swap');
-/*overriding defaults */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/*General Styles*/
-
+/* General styles */
 body {
-
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    /*Generic project Styles*/
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
-h1,h2,h3{
-    color: #252525;
+
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
-    letter-spacing: 2px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
-
-/* header */
+/* Header */
 header {
-    background-color: white;
+    background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
     z-index: 99;
@@ -39,23 +38,40 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-
-
 }
 
-/*styles for geaderer bropbox"*/
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu>li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    background-color: white;
+    background-color: #ffffff;
     width: 100%;
     left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
-
 }
 
+/* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
@@ -64,56 +80,28 @@ nav {
     display: none;
 }
 
-.nav-toggle-lable {
+.nav-toggle-label {
     font-size: 2rem;
 }
 
-header a {
-    text-decoration: none;
-    color: inherit;
-}
-
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-
-}
-
-#menu {
-
-    font-size: 110%;
-    list-style-type: none;
-    letter-spacing: 4px;
-
-
-}
-
-menu>li {
-    margin-bottom: 1em;
-}
-
-.active {
-    border-bottom: 1px solid #3a3a3a;
-}
-
-/*  main content  */
+/* Main content */
 main {
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
-
 }
-/*hero*/
-#hero{
+
+/* Hero section */
+#hero {
     height: 600px;
-    position: relative;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
-  
+    position: relative;
 }
-#cover-text{
-    background-color:	rgba(241, 109, 107, .7);
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
     bottom: 30px;
@@ -122,84 +110,75 @@ main {
     padding-top: 40px;
     padding-left: 10px;
 }
-#cover-text > h2,#cover-text > h3{
-    color: whitesmoke;
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
 }
 
-#reasons{
-  
-    position: relative;
-    align-self: baseline;
+/* Reasons section */
+#reasons {
     width: 90%;
-    margin-top: 20px;
+    margin: 20px auto;
 }
-#reasons > h3{
-   margin-bottom: 20px;
-   text-align: center;
-   font-size: 130%;
 
-}
-#benefits div p {
-    padding-left: 20px; /* Left padding */
-    padding-right: 20px; /* Right padding */
-}
-#benefits-physical div{
+#reasons h2 {
     margin-bottom: 20px;
-    line-height: 50px;
-   
-    margin-top: 5px; /* Margin on top */
-    margin-bottom: 5px; /* Margin on bottom */
-
- }
- #benefits-physical h3 {
-    border-bottom: 1px solid currentColor; /* Additional border with text color */
-    margin: 5px 0; /* Margin on top and bottom */
+    text-align: center;
+    font-size: 280%;
 }
-#benefits-mental div{
+
+#benefits-physical>div,
+#benefits-mental>div {
+    line-height: 20px;
     margin-bottom: 20px;
-    line-height: 50px;
-   
-    margin-top: 5px; /* Margin on top */
-    margin-bottom: 5px; /* Margin on bottom */
-
- }
- #benefits-mental h3 {
-    border-bottom: 1px solid currentColor; /* Additional border with text color */
-    margin: 5px 0; /* Margin on top and bottom */
 }
-#benefits-image{
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#circle-cover-bg {
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+    /* Makes the square image into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#circle-cover-bg{
-    background:url("../images/reasons-image.webp") no-repeat center center/cover;
-    margin-bottom: 20px;
-  border-radius: 50%;
-    width: 90vw;
-    height: 90vw;
-    margin-left: 20px;
-    max-width: 300px;
-    max-height: 300px;
-}
-/* footer */
+
+/* Footer */
 #social-networks {
-    
-    display: flex;
-    padding: 20px 0;
-    justify-content: space-evenly;
     text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
 }
+
 #social-networks i {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
-/* Styles for screens 768 pixels wide and larger (tablets and larger) */
+
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
-    /* header */
+    /* Header */
     nav {
         display: block;
         position: relative;
@@ -216,38 +195,79 @@ main {
         padding-left: 1rem;
     }
 
-    .nav-toggle-lable {
+    .nav-toggle-label {
         display: none;
     }
 
     #logo {
-        font-size: 200%;
+        font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
 
+    /* Main content */
     main {
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
-    #cover-text{
-        
+
+    /* Hero */
+    #cover-text {
         width: 300px;
         right: 50px;
-      
     }
-    
+
+    /* Reasons section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
 }
 
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-
-    /* header */
-
     #menu a:hover {
-
         border-bottom: 1px solid #3a3a3a;
+    }
+}
 
-
-
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
     }
 
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end;
+    }
 }
