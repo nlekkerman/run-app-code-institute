@@ -29,7 +29,36 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 
+
+}
+
+/*styles for geaderer bropbox"*/
+nav {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+
+}
+
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-lable {
+    font-size: 2rem;
 }
 
 header a {
@@ -42,22 +71,92 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
+
 }
 
 #menu {
-    letter-spacing: 2px;
-    font-size: larger;
+
+    font-size: 110%;
+    list-style-type: none;
+    letter-spacing: 4px;
+
+
+}
+
+menu>li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
 }
 
 /*  main content  */
 main {
     background-color: lightblue;
     flex: 1 0 auto;
+    margin-top: 47px;
 
 }
 
 /* footer */
-footer {
-    background-color: orange;
+#social-networks {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style-type: none;
+}
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+/* Styles for screens 768 pixels wide and larger (tablets and larger) */
+@media screen and (min-width: 768px) {
+
+    /* header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-lable {
+        display: none;
+    }
+
+    #logo {
+        font-size: 200%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    main {
+        margin-top: 79px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    /* header */
+
+    #menu a:hover {
+
+        border-bottom: 1px solid #3a3a3a;
+
+
+
+    }
 
 }
