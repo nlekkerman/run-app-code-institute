@@ -125,7 +125,16 @@ main {
 #cover-text > h2,#cover-text > h3{
     color: whitesmoke;
 }
-
+#reasons{
+    background-color: aqua;
+    position: absolute;
+}
+#reasons > h2{
+   margin: 20px;
+}
+#benefits-physical div{
+    border-bottom: 1px solid #000;
+ }
 /* footer */
 #social-networks {
     display: flex;
