@@ -198,6 +198,62 @@ main {
     line-height: 0;
 }
 
+#signup-form input.text-input {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #signup-form .join-button {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #007BFF; /* Default background color */
+    color: #fff; /* Default text color */
+  }
+#signup {
+            background: url('../images/signup-image.webp') no-repeat center center/cover;
+            background-size: cover;
+           background-position:75%;
+           padding: 30px;
+           color: #fafafa;
+            flex-grow: 1;
+        }
+
+        #signup-form {
+            background: rgba(60, 60, 60, 0.5);
+            padding: 30px;
+
+        }
+
+        #signup-form h2 {
+            color: #fafafa;
+        }
+
+        .text-input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .radio-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: #fafafa;
+
+        }
+
+        .radio-buttons label {
+            color: #fafafa;
+        }
+
+        .join-button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            font-size: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -284,6 +340,36 @@ main {
         column-count: 3;
         column-gap: 0;
     }
+    #signup {
+        background: url('../images/signup-image.webp') no-repeat center center/cover;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+
+    }
+    #signup-form {
+        
+        max-width: 400px;
+        margin: 150px 10% 0; /* 10% from the left, 150px from the top */
+        padding: 20px; /* Add some padding to the form for spacing */
+      }
+      
+      
+      #signup-form input.text-input:hover {
+        background-color: #EAEAEA; /* Change the background color on hover */
+        color: #333; /* Change the text color on hover */
+      }
+    
+     
+    
+      #signup-form .join-button:hover {
+        background-color: #FFA500; /* Change the background color on hover */
+        color: #fff; /* Change the text color on hover */
+      }
+    
+     
+ 
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -299,6 +385,33 @@ main {
         column-count: 4;
         column-gap: 0;
     }
+    #signup {
+        background: url('../images/signup-image.webp') no-repeat center center/cover;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+
+    }
+    #signup-form {
+       
+        max-width: 400px;
+        margin: 150px 10% 0; /* 10% from the left, 150px from the top */
+        padding: 20px; /* Add some padding to the form for spacing */
+      }
+      
+      
+      #signup-form input.text-input:hover {
+        background-color: #EAEAEA; /* Change the background color on hover */
+        color: #333; /* Change the text color on hover */
+      }
+    
+     
+    
+      #signup-form .join-button:hover {
+        background-color: #FFA500; /* Change the background color on hover */
+        color: #fff; /* Change the text color on hover */
+      }
 }
 
 @media screen and (min-width: 1200px) {    
@@ -333,4 +446,31 @@ main {
     #times{
         flex-direction: row;
     }
+    #signup {
+        background: url('../images/signup-image.webp') no-repeat center center/cover;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+
+    }
+    #signup-form {
+       
+        max-width: 400px;
+        margin: 150px 10% 0; /* 10% from the left, 150px from the top */
+        padding: 20px; /* Add some padding to the form for spacing */
+      }
+      
+      
+      #signup-form input.text-input:hover {
+        background-color: #EAEAEA; /* Change the background color on hover */
+        color: #333; /* Change the text color on hover */
+      }
+    
+     
+    
+      #signup-form .join-button:hover {
+        background-color: #FFA500; /* Change the background color on hover */
+        color: #fff; /* Change the text color on hover */
+      }
 }
